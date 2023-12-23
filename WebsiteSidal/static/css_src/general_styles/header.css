@@ -1,0 +1,269 @@
+
+@import url('https://fonts.cdnfonts.com/css/ethnocentric');
+@font-face {
+    font-family: ethnocentric;
+    src: url("font_src/Logo.otf") format("opentype");
+}
+
+
+#menu-icon{
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none;
+}              
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    z-index: 100;
+
+}
+
+.header.sticky{
+    border-bottom: .1rem solid rgba(0,0,0,.4);
+}
+/*------------------- Product Items --------------------*/
+.header-product-menuitems{
+    height: 50px;
+    width:30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color:rgba(0, 255, 255, 0); */
+    border-radius: 10px;
+    border: 1.5px solid red;
+    font-size: 12px;
+    font-weight: 600;
+    margin-left: 5px;
+}
+.header-product-menuitems a{
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-color);
+    
+    transition: .3s;
+}
+.header-product-menuitems a:hover,
+.header-product-menuitems a.active{
+    color: var(--main-color);
+
+}
+
+/*-------------------- LOGO Middle --------------------*/
+.header-logo-sidal{
+    width: 40%;
+    height : 100%;
+    background-color: #a2ff0000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    justify-items: center;
+}
+.divelogo{
+    width: 100%;
+    height: 100%;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    justify-items: center;
+    font-family: 'Ethnocentric';
+    border: 3px black;
+    
+    background: #bbdb8500;
+}
+.header-logo-sidal a{
+    width: 90%;
+    height: 100%;
+    font-size: 40px;
+    text-decoration:none;
+    color: red;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    text-align: center;
+    justify-items: center;
+    font-family: 'Ethnocentric';
+
+
+    background: #a2ff0000;
+}
+.squares-logo{
+    font-family: 'Ethnocentric';
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    justify-items: center;
+    width: 22%;
+    height: 100%;
+
+    background: #08c4a500;
+}
+.divsquare{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    justify-items: center;
+    border: 3.5px black solid;
+    width: 40px;
+    aspect-ratio: 1/1;
+    rotate: 45deg;
+
+   
+}
+#sq1{
+    margin-left: 0px;
+     background-color: #0077ff00;
+}
+
+#sq2{
+    margin-left: -50px;
+     background-color: #ff009900;
+}
+
+#sq3{
+    margin-left: -50px;
+     background-color: #9dff0000;
+}
+#sq4{
+    margin-left: -50px;
+     background-color: #ff009900;
+}
+
+#sq5{
+    margin-left: -50px;
+     background-color: #9dff0000;
+}
+
+.words-logo{
+    font-family: 'Ethnocentric';
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    justify-items: center;
+    width: 60%;
+    height: 100%;
+    font-size: 12px ;
+
+    background: #ff660000;
+}
+.sidal-word{
+    font-family: 'Ethnocentric';
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+    text-align: end;
+    justify-items: end;
+    width: 100%;
+    height: 60%;
+
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 20px;
+    
+    background: #ae00ff00;
+}
+.sincewords{
+    font-family: 'Ethnocentric';
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    text-align: center;
+    justify-items: center;
+    width: 100%;
+    height: 40%;
+    
+
+    background: #ff45bb00;
+}
+.sincewords span{
+    font-family: 'Ethnocentric';
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    justify-items: center;
+    width: 50%;
+    height: 100%;
+    color: #000000;
+}
+.sincewords p{
+    font-family: 'Ethnocentric';
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    justify-items: center;
+    width: 50%;
+    height: 100%;
+    color: #8e8e8e;
+}
+/*-------------------- Company & Contact-Us --------------------*/
+.header-company-contact-menuitems{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    justify-items: center;
+    background-color: #0077ff00;
+}
+.divb{
+    background: #0077ff00;
+    color: #0077ff00;
+    width: 5%;
+}
+
+.header-company-contact-menuitems  a{
+    width: 30%;
+    font-size: 15px;
+    font-weight: 900;
+    color:black;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 5px;
+    padding: 1px;
+}
+#lang{
+    width: 10%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    justify-items: center;
+    border: 1px solid red;
+}
+#lang:hover{
+    border: 1px solid rgb(76, 84, 91);
+    background-color: rgb(76, 84, 91);
+    color: rgb(255, 255, 255);
+}
+.header-company-contact-menuitems  a:hover{
+    color: var(--main-color);
+    border-bottom: 1px solid var(--second-bg-color);
+}
+
+
+
+
+
+
+

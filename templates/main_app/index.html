@@ -1,0 +1,272 @@
+{% extends "base.html" %}
+{% load static %}
+<link rel='stylesheet' href="{% static 'css_src/pages/homePage.css' %}">
+{% block content %}
+
+<div class="page_Container Big_Snap_Scroll_y">
+    <!--|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-->
+    <!-- Main Sction design -->
+    <section class="home"  id="home">
+        <div class="home_Container">
+            <div class="home_content">
+                <h1>
+                    {{html_MainViewPage.company_Name | title }} 
+                </h1> 
+                <h3>
+                    {{ html_MainViewPage.first_words  }}
+                </h3>
+                
+                <div>
+                    {{html_MainViewPage.Discription }}
+                </div>
+            </div>
+            <div class="btnArrow" id="btnbk">
+                <i class="fa-solid fa-angle-left"></i>
+            </div>
+            
+            <div class="home_img ">
+                {% for X in html_MainPagePics %}
+                <div class="home_img_container">
+                    <img class="new_home_img" src=" {{X.image.url}} "  alt="x.name">
+                </div>
+                {% endfor %}
+            </div>
+            <div class="btnArrow" id="btnxt">
+                <i class="fa-solid fa-angle-right"></i>
+            </div>
+        </div>
+    </section>
+    <!--|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-->
+
+
+
+    <!--|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-->
+    <!-- About Sction design -->
+    <section class="about" id="about">
+        <div class="about_Container">
+            <h2 class="titles">About Sidal</h2>
+            <div class="divabout">
+                <div class="about_img">
+                    <img id="about_image_img" src=" {{html_AboutUS.image.url}} "  alt="html_AboutUS.comapny_name">
+                </div>
+                <div class="about_Description" id="about_Description">
+                    <h3 class="heading">
+                        {{html_AboutUS.comapny_name  }}
+                    </h3> 
+                    <p>
+                        {{html_AboutUS.descrip  }}
+                    </p> 
+                </div>
+            </div>
+            <div class="social_media_Links">
+                <div class="our_soc">
+                    Our Social Media Links
+                </div>
+                <div class="social_Items ">
+                    {% for social in html_SocialMediaLinks %}
+                    <div>
+                        <a class="Social_A_Icon" atter-name="{{social.platform}}" href="{{social.link}}">
+                            <i class="{{social.icons}}"></i>
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-->
+
+
+
+    <!--|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-->
+    <!-- Service Section design -->
+    <section class="services Small_Snap_Scroll_y" id="services">
+        <div class="spacing">
+            <h2 class="titles"> Sidal Services</h2>
+            <div class="services_conta">
+                <div class="ccds" id="btnbk_services">
+                    <i class="fa-solid fa-angle-left"></i>
+                </div>
+                <div class="service_extra">
+                    {% for ser in html_Services %}
+                        <div class="div_spaceing">
+                            <div class="services_box ">
+                                <i id='serv_icont' class='{{ser.icon}}'></i> 
+                                <h3>{{ser.service_name}}</h3>
+                                <p> 
+                                    {{ser.explanation}} 
+                                </p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="ccds" id="btnxt_services">
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- 
+ ICONS ARROW
+ <i class="fa-solid fa-angles-right"></i>
+ <i class="fa-solid fa-angles-up"></i>
+ <i class="fa-solid fa-angles-down"></i>
+ <i class="fa-solid fa-angles-left"></i>
+
+ <i class="fa-solid fa-angle-right"></i>
+ <i class="fa-solid fa-angle-left"></i>
+ <i class="fa-solid fa-angle-down"></i>
+ <i class="fa-solid fa-angle-up"></i> 
+-->
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock content %}
+
+
+{% comment %} 
+        
+    <div class="page_Container Big_Snap_Scroll_y">
+        <!--|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-->
+        <!-- Main Sction design -->
+        <section class="home Small_Snap_Scroll_y"  id="home">
+            <div class="home-content">
+                <h3>
+                    {{ html_MainViewPage.first_words  }}
+                </h3>
+                <h1>
+                    {{html_MainViewPage.company_Name | title }} 
+                </h1> 
+                <span>
+                    {{html_MainViewPage.Discription }}
+                </span>
+            </div>
+            <div class="btnArrow" id="btnbk">
+                <i class="fa-solid fa-angle-left"></i>
+            </div>
+            {% comment %} Big_Snap_Scroll_x 
+            <div class="home_img ">
+                {% for X in html_MainPagePics %}
+                    <img class="new_home_img" src= " {{X.image.url}} "  alt="x.name">
+                {% endfor %}   
+            </div>
+            <div class="btnArrow" id="btnxt">
+                <i class="fa-solid fa-angle-right"></i>
+            </div>
+        </section>
+        <!--|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-->
+
+
+
+        <!--|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-->
+        <!-- About Sction design -->
+        <section class="about Small_Snap_Scroll_y " id="about">
+            <div class="about_Container">
+                <h2 class="titles">About Sidal</h2>
+                <div class="divabout">
+                    <div class="about_img">
+                        <img id="about_image_img" src= " {{html_AboutUS.image.url}} "  alt="html_AboutUS.comapny_name">
+                    </div>
+                    <div class="about_Description" id="about_Description">
+                        <h3 class="heading">
+                            {{html_AboutUS.comapny_name  }}
+                        </h3> 
+                        <p>
+                            {{html_AboutUS.descrip  }}
+                        </p> 
+                    </div>
+                </div>
+                <div class="social_media_Links">
+                    <div class="our_soc">
+                        Our Social Media Links
+                    </div>
+                    <div class="social_Items ">
+                        {% for social in html_SocialMediaLinks %}
+                            <div>
+                                <a class="Social_A_Icon" atter-name="{{social.platform}}" href="{{social.link}}">
+                                    <i class="{{social.icons}}"></i>
+                                </a>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-->
+
+
+
+        <!--|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-&BBBBBB&-|-->
+        <!-- Service Section design -->
+        <section class="services Small_Snap_Scroll_y" id="services">
+            <div class="spacing">
+                <h2 class="titles"> Sidal Services</h2>
+                <div class="services_container">
+                    <div class="btnArrow" id="btnbk_services">
+                        <i class="fa-solid fa-angle-left"></i>
+                    </div>
+                    <div class="service_extra Big_Snap_Scroll_x">
+                        {% for ser in html_Services %}
+                            <div class="div_spaceing">
+                                <div class="services_box Small_Snap_Scroll_x">
+                                    <i id="ser_icon" class='{{ser.icon}}'></i> 
+                                    <h3>{{ser.service_name}}</h3>
+                                    <p> 
+                                        <textarea name="" id="" cols="30" rows="10" >
+                                            {{ser.explanation}} 
+                                        </textarea>  
+                                    </p>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="btnArrow" id="btnxt_services">
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- 
+        ICONS ARROW
+        <i class="fa-solid fa-angles-right"></i>
+        <i class="fa-solid fa-angles-up"></i>
+        <i class="fa-solid fa-angles-down"></i>
+        <i class="fa-solid fa-angles-left"></i>
+    
+        <i class="fa-solid fa-angle-right"></i>
+        <i class="fa-solid fa-angle-left"></i>
+        <i class="fa-solid fa-angle-down"></i>
+        <i class="fa-solid fa-angle-up"></i> 
+    -->
+{% endcomment %}

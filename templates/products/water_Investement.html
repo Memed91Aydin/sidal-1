@@ -1,0 +1,242 @@
+{% extends "base.html" %}
+{% load static %}
+<link rel='stylesheet' href="{% static 'css_src/sidstyle1.css' %}">
+{% block content %}
+
+<!--##################  W A T E R  T R A T E M E N T   ##################-->
+<div class="page_Container">
+
+    <section id="sec_1" class="air_jetinkor" >
+        <div class="Section_Container">
+            <h2 class="titles">Water Invesemet Equipement</h2>
+            <div class="AirComp_ShowSpace">
+                <div id="btnbkw1" class="btnArrow">
+                    <i class="fa-solid fa-angle-left"></i>
+                </div>
+                <div id="element_container4WaterInvesemetEquipement" class="element_container">
+                    {% for WaterInvesemetEquipement in html_WaterInvesemetEquipement %}
+                        <div id="airComp_box4WaterInvesemetEquipement" class="airComp_box">
+                            <div class="airComp_box_up">
+                                <div class="airComp_box_up_in">
+                                    <a href="{{WaterInvesemetEquipement.pdf_file.url}}" download>
+                                        <i class="fa-solid fa-file-pdf"></i>
+                                    </a>
+                                    <p>{{WaterInvesemetEquipement.name}}</p>
+                                    <span>{{WaterInvesemetEquipement.type}}</p>
+                                </div>   
+                            </div>
+                            <div class="airComp_box_down">
+                                <img src="{{WaterInvesemetEquipement.image.url}}" alt="{{WaterInvesemetEquipement.name}}">
+                                <span class="airComp_box_down_span">
+                                    <div class="airComp_box_down_span_h6">
+                                        {{WaterInvesemetEquipement.description}}
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div id="btnxtw1" class="btnArrow">
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sec_1" class="air_jetinkor" >
+        <div class="Section_Container">
+            <h2 class="titles">Water Invesemet System</h2>
+            <div class="AirComp_ShowSpace">
+                <div id="btnbkw2" class="btnArrow">
+                    <i class="fa-solid fa-angle-left"></i>
+                </div>
+                <div id="element_container4WaterInvesemetSystem" class="element_container">
+                    {% for WaterInvesemetSystem in html_WaterInvesemetSystem %}
+                        <div id="airComp_box4WaterInvesemetSystem" class="airComp_box">
+                            <div class="airComp_box_up">
+                                <div class="airComp_box_up_in">
+                                    <a href="{{WaterInvesemetSystem.pdf_file.url}}" download>
+                                        <i class="fa-solid fa-file-pdf"></i>
+                                    </a>
+                                    <p>{{WaterInvesemetSystem.name}}</p>
+                                    <span>{{WaterInvesemetSystem.type}}</p>
+                                </div>   
+                            </div>
+                            <div class="airComp_box_down">
+                                <img src="{{WaterInvesemetSystem.image.url}}" alt="{{WaterInvesemetSystem.name}}">
+                                <span class="airComp_box_down_span">
+                                    <div class="airComp_box_down_span_h6">
+                                        {{WaterInvesemetSystem.description}}
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div id="btnxtw2" class="btnArrow">
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+{% endblock content %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- <div class="air-jetinkor-comp-container">
+                <h5>jetinkors</h5>
+                <div class="air-jetinkor-comp-parts">
+                    <div class="air-jetinkor-comp-box">
+                    wwwwwwwww
+                    </div>
+                    <div class="air-jetinkor-comp-box">
+                        wwwwwwwwww
+                    </div>
+                    <div class="air-jetinkor-comp-box">
+                        wwwwwwwwww
+                    </div>
+                    <div class="air-jetinkor-comp-box">
+                        wwwwwwww
+                    </div>
+                </div>
+            </div>
+            <div class="air-jetinkor-eq-container">
+                Equipments
+                <div class="air-jetinkor-eq-box">
+
+                </div>  
+            </div> -->
+
+    <!-- PAGINATION OR LOAD MORE
+        lets say I have 
+        class news(): that defines ( title, description, date, image) fields in django
+
+        that news will go to front end 
+        and will showen at ul and li for each news,,, 
+        how can show news without making my website slow by loading all these news 
+        can I make it lazy loading?
+        or pagination 
+
+        all that I need is ideas for not loading all news at once 
+        suggest for me all of possible solutions
+
+        ChatGPT
+        There are several possible solutions to avoid loading all news at once and improve the performance of your website. 
+        Here are a few ideas:
+
+        Lazy Loading: Implement lazy loading to load news content as the user scrolls down the page. 
+        Initially, load a small number of news items, and as the user reaches the end of the loaded content, 
+        load additional news items dynamically. This approach helps reduce the initial load time and only fetches data when needed.
+
+        Pagination: Divide your news items into pages and display a fixed number of news items per page. 
+        Provide navigation controls such as "Next" and "Previous" to allow users to browse through different pages of news. 
+        This way, you only load and display a limited number of news items at a time.
+
+        Infinite Scroll: Similar to lazy loading, implement infinite scroll to load news items continuously as the user scrolls down the page. 
+        Instead of traditional pagination, the content is dynamically loaded and appended to the existing news list. 
+        This approach provides a seamless browsing experience for users.
+
+        Load More Button: Instead of automatically loading additional news items, 
+        you can implement a "Load More" button that fetches and displays a batch of news items when clicked. 
+        This approach allows users to control when they want to see more news and avoids overwhelming the page with excessive content.
+
+        Caching: Implement caching mechanisms to store and serve previously loaded news content. 
+        By caching the news data, subsequent requests for the same content can be 
+        served faster without hitting the database or performing complex computations.
+
+        Server-Side Filtering: If you have a large number of news items, 
+        consider implementing server-side filtering based on different criteria such as category, date, or popularity. 
+        Allow users to select specific filters to refine the displayed news content, reducing the number of items that need to be loaded.
+
+        Prioritization: Initially load and display the most recent or popular news items, 
+        and load older or less popular news items as the user interacts with the page. 
+        This way, users can quickly see the latest news while older content is loaded gradually in the background.
+
+        You can combine multiple approaches or experiment with different solutions based on the specific requirements of your website 
+        and the preferences of your users.
+
+
+
+
+        //------- Another Responed -------//
+        To implement pagination in Django, you can follow these steps:
+
+        In your view, retrieve the news articles from the database and create a Paginator object, 
+        specifying the number of articles you want to display per page.
+
+        Get the current page number from the request parameters (e.g., URL query parameters or form data).
+
+        Use the Paginator object to retrieve the articles for the current page using the get_page() method.
+
+        Pass the articles for the current page to your template for rendering.
+
+        In your template, display the news articles as <li> elements inside a <ul> container.
+
+            Add navigation links (e.g., previous page, next page) that include the appropriate page numbers in the URLs.
+        By implementing pagination or lazy loading, you can control the amount of news articles loaded at once, 
+        preventing your website from becoming slow due to the heavy initial load.
+    -->
+    

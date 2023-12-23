@@ -1,0 +1,73 @@
+{% load static %}
+<link rel='stylesheet' href="{% static 'css_src/general_styles/header.css' %}">
+
+
+<header class="header">
+    <i class='bx bx-menu' id="menu-icon"></i>  
+    <div class="header-product-menuitems">
+        <a href="{% url 'aircompressor' %}"> Compressors</a>
+        <a href="{% url 'waterinvestement' %}">Water </a>
+        <a href="{% url 'jetink' %}">Printers</a>
+        <a href="{% url 'steelstanless' %}">Steel Stanless</a>
+    </div> 
+    <div class="header-logo-sidal">
+        <div class="divelogo">
+            <a href="{% url 'index' %}" id="homeClick">
+                <div class="squares-logo">
+                    <div class="divsquare" id="sq1"></div>
+                    <div class="divsquare" id="sq2"></div>
+                    <div class="divsquare" id="sq3"></div>
+                    <div class="divsquare" id="sq4"></div>
+                    <div class="divsquare" id="sq5"></div>
+                </div>
+                <div class="words-logo">
+                    <div class="sidal-word">
+                        SIDAL
+                    </div>
+                    <div class="sincewords">
+                        <span class="compltd">COMPANY LTD. </span>
+                        <p class="since">SINCE 2006</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="header-company-contact-menuitems">
+        <div class="divb"></div>
+        <a href="{% url 'company' %}">Company</a>
+        <a href="{% url 'contact_us' %}">Contact Us</a>
+        <a id="lang" href="#">EN</a>
+    </div>
+        
+</header>
+<!--
+{% comment %}
+ <header class="header">
+    <i class='bx bx-menu' id="menu-icon"></i>  
+    <div class="header-product-menuitems">
+        <a href="{% url 'aircompressor' %}"> Compressors</a>
+        <a href="{% url 'waterinvestement' %}">Water </a>
+        <a href="{% url 'jetink' %}">Printers</a>
+        <a href="{% url 'steelstanless' %}">Steel Stanless</a>
+    </div> 
+    <div class ="header-logo-sidal">
+        <a href="{% url 'index' %}" class="logo" id="homeClick">Sidal</a>
+    </div>
+    <div class="header-company-contact-menuitems">
+        <a href="{% url 'contact_us' %}">Contact Us</a>
+        <a href="{% url 'company' %}">Company</a>
+    </div>
+        
+</header> 
+
+{% endcomment %}
+-->
+
+
+{% comment %} <span><a href="{% url 'company' %}"> company</a></span>
+<span><a href="{% url 'index' %}"> home</a></span>
+
+<h2>header</h2>
+<img src='{% static "image_src/1.png" %}'>
+<br>
+<br> {% endcomment %}

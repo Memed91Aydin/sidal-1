@@ -1,0 +1,204 @@
+{% extends "base.html" %}
+{% load static %}
+<link rel='stylesheet' href="{% static 'css_src/sidstyle1.css' %}">
+{% block content %}
+
+
+<div class="page_Container">
+    <!--##################  N E W S  ##################-->
+    <section class="news" id="news">
+        <div class="Section_Container">
+            <h2 class="titles">Latest NEWS</h2>
+            <div class="news_ShowSpace">
+                <div id="btnbk_news" class="btnArrow">
+                    <i class="fa-solid fa-angle-left"></i>
+                </div>
+                <div id="element_container4news" class="news_element_container ">
+                    {% for LatestNews in html_LatestNews %}
+                    <div id="news_box" class="news_new_box">
+                        <div  class="news_box ">
+                            <div class="news_box_up">
+                                <img src="{{LatestNews.image.url}}" alt="{{LatestNews.title}}">
+                                <div class="news_box_up_in">
+                                    <p>{{LatestNews.title}}</p>
+                                    <span>{{LatestNews.dateofEvent}}</span>
+                                    <a href="{{LatestNews.links}}">See more about This event...</i></a>
+                                </div>   
+                            </div>
+                            <div class="news_box_down">
+                                <span class="news_box_down_span">
+                                    <div class="news_box_down_span_h6">
+                                        {{LatestNews.description}}
+                                    </div>>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %} 
+                </div>
+                <div id="btnxt_news" class="btnArrow">
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--##################  N E W S  ##################-->
+    
+    
+    
+    <!--##################  B R A N C H E S  ##################-->
+    <section class="branches" id="branches">
+        <div class="Section_Container">
+            <h2 class="titles">Our Branches</h2>
+            <div class="branches_ShowSpace">
+                <div id="btnbk_branches" class="btnArrow">
+                    <i class="fa-solid fa-angle-left"></i>
+                </div>
+                <div id="element_container4branches" class="branches_element_container ">
+                    {% for OurBranches in html_OurBranches %}
+
+                    <div id="branches_box" class="branches_new_box">
+                        <div  class="branches_box ">
+                            <div class="branches_box_left">
+                                <iframe src="{{OurBranches.location}}" 
+                                width="auto" height="auto" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            </div>
+                            <div class="branches_box_right">
+                                <h2 class="titles">
+                                    {{OurBranches.name}}
+                                </h2>
+                                <div class="branches_box_infos">
+                                    <div class="branches_box_infos_span">
+                                        <i class="fa-solid fa-phone"></i>
+                                        <i class="fax">fax</i><!-- <i class="fa-solid fa-fax"></i> -->
+                                        <i class="fa-solid fa-envelope"></i>
+                                        <i class="fa-brands fa-internet-explorer"></i>
+                                        <i class="fa-solid fa-location-dot"></i>
+                                    </div>
+                                    <div class="branches_box_infos_p">
+                                        <div class="infos_p_phone">{{OurBranches.tele}}</div>
+                                        <div class="infos_p_fax">{{OurBranches.fax}}</div>
+                                        <div class="infos_p_email">{{OurBranches.mail}}</div>
+                                        <div class="infos_p_website">{{OurBranches.website}}</div>
+                                        <div class="infos_p_address">{{OurBranches.address}}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {% endfor %}
+                </div>
+                <div id="btnxt_branches" class="btnArrow">
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+            </div>
+    </section>
+    <!--##################  B R A N C H E S  ##################-->
+    
+    
+    
+    
+    <!--##################  T E C H N O L O G Y  ##################-->
+    <section class="technology" id="technology">
+        <div class="Section_Container">
+            <h2 class="titles">Our technologies</h2>
+            <div class="technology_ShowSpace">
+                <div id="element_container4technology" class="technology_element_container ">
+                    <!-- {% for Rotary in html_RotaryScrewjetinkor %} -->
+                    <div id="technology_box" class="technology_new_box">
+                        <div  class="technology_box">
+                            <a href="rd" class="technology_box_a">
+                                <div class="tec_box_icon">
+                                <img src="kalite.png"> 
+                                </div>
+                                <div class="tec_box_full_name">
+                                    R&D
+                                </div>
+                                
+                                <div class="tec_box_descrip">
+
+                                </div>
+                            </a>
+                            <a href="peoduction" class="technology_box_a">
+                                <div class="tec_box_icon">
+                                <img src="arge.png"> 
+                                </div>
+                                <div class="tec_box_full_name">
+                                    peoduction
+                                </div>
+                                
+                                <div class="tec_box_descrip"></div>
+                            </a>
+                            <a href="quality" class="technology_box_a">
+                                <div class="tec_box_icon">
+                                    <img src="uretim.png">
+
+                                </div>
+                                <div class="tec_box_full_name">
+                                    quality
+                                </div>
+                                
+                                <div class="tec_box_descrip">
+                                    
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+    
+        </section>
+    <!--##################  T E C H N O L O G Y  ##################-->
+    
+    
+    
+    
+    <!--##################  C A T A L O G  ##################-->
+    <section class="catalogue" id="catalogue">
+        <div class="Section_Container">
+            <h2 class="titles">Our catalogues</h2>
+            <div class="catalogue_ShowSpace">
+                <div id="btnbk_catalogue" class="btnArrow">
+                    <i class="fa-solid fa-angle-left"></i>
+                </div>
+                <div id="element_container4tcatalogue" class="catalogue_element_container ">
+                    {% for Catalogue in html_Catalogue %}
+                    
+                    <div id="catalogue_box" class="catalogue_new_box">
+                        <div  class="catalogue_box">
+                            <div class="catalogue_box_up">
+                                <img src="{{Catalogue.image.url}}" alt="{{Catalogue.name}}">
+                            </div>
+                            <div class="catalogue_box_down">
+                                <p class="catalogue_box_title">
+                                    {{Catalogue.name}}
+                                    
+                                </p>
+                                <span class="catalogue_box_laguage">
+                                    {{Catalogue.language}}
+                                </span>
+                                <a class="catalogue_box_download" href="{{Catalogue.pdf_file.url}}" download>
+                                    <i class="fa-solid fa-file-pdf"></i>
+                                </a>
+                            </div>    
+                        </div>
+                    </div>
+                    
+                    {% endfor %} 
+                </div>
+                <div id="btnxt_catalogue" class="btnArrow">
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--##################  C A T A L O G  ##################-->
+</div>
+
+{% endblock content %}
+
+
+

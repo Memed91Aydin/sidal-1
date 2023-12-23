@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+
+
+<section class="contact" id="contact">
+    <h2 class="heading">Contact <span>Us</span></h2>
+
+    <form action="#" method="POST">
+        {% csrf_token %}
+        <div class="input-box">
+            <input type="text" name="username" placeholder="Full Name" maxlength="50">
+            <input type="email" name="subject" placeholder="Email Address" maxlength="50">
+        </div>
+        <div class="input-box">
+            <input type="number" name="phone" placeholder="Mobile Number" maxlength="11" >
+            <input type="text" name="user_email" placeholder="Email Subject" maxlength="50">
+        </div>
+        <textarea id="" name="messageBody" cols="30" rows="10" placeholder="Your Message"></textarea>
+        <input type="submit" value="Send Message" class="btn">
+    </form>
+</section>
+
+
+{% endblock content %}

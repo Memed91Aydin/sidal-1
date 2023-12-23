@@ -1,0 +1,464 @@
+{% extends "base.html" %}
+{% load static %}
+<link rel='stylesheet' href="{% static 'css_src/sidstyle1.css' %}">
+{% block content %}
+
+<!--^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^-->
+
+    <!-- ################################################## -->
+
+    <!--##################  A I R   C O M P R E S S O R  ##################-->
+
+    <section class="air-jetinkor .myScroll-red" id="air-jetinkor">
+        <h2 class="air-jetinkor-heading">Latest <span>air-jetinkor</span></h2>
+        <div class="air-jetinkor-show-space">
+            <div class="air-jetinkor-container" id="aircompcontainer">
+
+                <!--#######################-->
+                {% for Rotary in html_RotaryScrewjetinkor %}
+                    <div class="air-jetinkor-box" type-attr="Rotary">
+                        <div class="jetinkShow_left">
+                            <a href="{{Rotary.pdf_file.url}}" download><i class="fa-solid fa-file-pdf"></i></a>
+                            <img src="{{Rotary.image.url}}" alt="{{Rotary.name}}">
+                            <p>{{Rotary.type}}</p>
+                        </div>
+                        <div class="jetinkShow_right">
+                            <p class="air-jetinkor-name">{{Rotary.name}}</p>
+                            <span class="air-jetinkor-which-section">{{Rotary.description}}</span>
+                        </div>
+                    </div>
+                {% endfor %}
+                <!--#######################-->
+
+                <!--#######################-->
+                {% for Reciprocatingjetinkor in html_Reciprocatingjetinkor %}
+                    <div class="air-jetinkor-box" type-attr="Reciprocatingjetinkor">
+                        <div class="jetinkShow_left">
+                            <a href="{{Reciprocatingjetinkor.pdf_file.url}}" download><i class="fa-solid fa-file-pdf"></i></a>
+                            <img src="{{Reciprocatingjetinkor.image.url}}" alt="{{Reciprocatingjetinkor.name}}">
+                            <p>{{Reciprocatingjetinkor.type}}</p>
+                        </div>
+                        <div class="jetinkShow_right">
+                            <p class="air-jetinkor-name">{{Reciprocatingjetinkor.name}}</p>
+                            <span class="air-jetinkor-which-section">{{Reciprocatingjetinkor.description}}</span>
+                        </div>
+                    </div>
+                {% endfor %}
+                <!--#######################-->
+
+                <!--#######################-->
+                {% for Scrolljetinkor in html_Scrolljetinkor %}
+                    <div class="air-jetinkor-box" type-attr="Scrolljetinkor">
+                        <div class="jetinkShow_left">
+                            <a href="{{Scrolljetinkor.pdf_file.url}}" download><i class="fa-solid fa-file-pdf"></i></a>
+                            <img src="{{Scrolljetinkor.image.url}}" alt="{{Scrolljetinkor.name}}">
+                            
+                        </div>
+                        <div class="jetinkShow_right">
+                            <p class="air-jetinkor-name">{{Scrolljetinkor.name}}</p>
+                            <span class="air-jetinkor-which-section">{{Scrolljetinkor.description}}</span>
+                        </div>
+                    </div>
+                {% endfor %}
+                <!--#######################-->
+
+                <!--#######################-->
+                {% for Turbojetinkor in html_Turbojetinkor %}
+                    <div class="air-jetinkor-box" type-attr="Turbojetinkor">
+                        <div class="jetinkShow_left">
+                            <a href="{{Turbojetinkor.pdf_file.url}}" download><i class="fa-solid fa-file-pdf"></i></a>
+                            <img src="{{Turbojetinkor.image.url}}" alt="{{Turbojetinkor.name}}">
+                            
+                        </div>
+                        <div class="jetinkShow_right">
+                            <p class="air-jetinkor-name">{{Turbojetinkor.name}}</p>
+                            <span class="air-jetinkor-which-section">{{Turbojetinkor.description}}</span>
+                        </div>
+                    </div>
+                {% endfor %}
+                <!--#######################-->
+
+                <!--#######################-->
+                {% for AirDryerEquipement in html_AirDryerEquipement %}
+                    <div class="air-jetinkor-box" type-attr="AirDryerEquipement">
+                        <div class="jetinkShow_left">
+                            <a href="{{AirDryerEquipement.pdf_file.url}}" download><i class="fa-solid fa-file-pdf"></i></a>
+                            <img src="{{AirDryerEquipement.image.url}}" alt="{{AirDryerEquipement.name}}">
+                            
+                        </div>
+                        <div class="jetinkShow_right">
+                            <p class="air-jetinkor-name">{{AirDryerEquipement.name}}</p>
+                            <span class="air-jetinkor-which-section">{{AirDryerEquipement.description}}</span>
+                        </div>
+                    </div>
+                {% endfor %}
+                <!--#######################-->
+
+                <!--#######################-->
+                {% for FilterEquipement in html_FilterEquipement %}
+                    <div class="air-jetinkor-box" type-attr="FilterEquipement">
+                        <div class="jetinkShow_left">
+                            <a href="{{FilterEquipement.pdf_file.url}}" download><i class="fa-solid fa-file-pdf"></i></a>
+                            <img src="{{FilterEquipement.image.url}}" alt="{{FilterEquipement.name}}">
+                            
+                        </div>
+                        <div class="jetinkShow_right">
+                            <p class="air-jetinkor-name">{{FilterEquipement.name}}</p>
+                            <span class="air-jetinkor-which-section">{{FilterEquipement.description}}</span>
+                        </div>
+                    </div>
+                {% endfor %}
+                <!--#######################-->
+
+                <!--#######################-->
+                {% for AirReceiverEquipement in html_AirReceiverEquipement %}
+                    <div class="air-jetinkor-box" type-attr="AirReceiverEquipement">
+                        <div class="jetinkShow_left">
+                            <a href="{{AirReceiverEquipement.pdf_file.url}}" download><i class="fa-solid fa-file-pdf"></i></a>
+                            <img src="{{AirReceiverEquipement.image.url}}" alt="{{AirReceiverEquipement.name}}">
+                           
+                        </div>
+                        <div class="jetinkShow_right">
+                            <p class="air-jetinkor-name">{{AirReceiverEquipement.name}}</p>
+                            <span class="air-jetinkor-which-section">{{AirReceiverEquipement.description}}</span>
+                        </div>
+                    </div>
+                {% endfor %}
+                <!--#######################-->
+
+                <!--#######################-->
+                {% for NitrogenGeneratorEquipement in html_NitrogenGeneratorEquipement %}
+                    <div class="air-jetinkor-box" type-attr="NitrogenGeneratorEquipement">
+                        <div class="jetinkShow_left">
+                            <a href="{{NitrogenGeneratorEquipement.pdf_file.url}}" download><i class="fa-solid fa-file-pdf"></i></a>
+                            <img src="{{NitrogenGeneratorEquipement.image.url}}" alt="{{NitrogenGeneratorEquipement.name}}">
+                            
+                        </div>
+                        <div class="jetinkShow_right">
+                            <p class="air-jetinkor-name">{{NitrogenGeneratorEquipement.name}}</p>
+                            <span class="air-jetinkor-which-section">{{NitrogenGeneratorEquipement.description}}</span>
+                        </div>
+                    </div>
+                {% endfor %}
+                <!--#######################-->
+
+            </div>
+        </div>
+    </section>
+
+    <!--##################  A I R   C O M P R E S S O R  ##################-->
+
+    <!-- ################################################## -->
+
+    <!--##################  W A T E R  T R A T E M E N T   ##################-->
+
+    <section class="water-tratement" id="water-tratement">
+        <span>water-tratement</span></h1>
+        <div class="water-tratement-show-space">
+            <div class="water-tratement-container">
+                {% for WaterInvesemetEquipement in html_WaterInvesemetEquipement %}
+                    <div class="Ink-jet-box" type-attr="Water-Equipement">
+                        <div class="jetinkShow_left">
+                            <a href="{{WaterInvesemetEquipement.pdf_file.url}}" download><i class="fa-solid fa-file-pdf"></i></a>
+                            <img src="{{WaterInvesemetEquipement.image.url}}" alt="{{WaterInvesemetEquipement.name}}">
+                            <p>{{WaterInvesemetEquipement.type}}</p>
+                        </div>
+                        <div class="jetinkShow_right">
+                            <p class="air-jetink-name">{{WaterInvesemetEquipement.name}}</p>
+                            <span class="air-jetink-which-section">{{WaterInvesemetEquipement.description}}</span>
+                        </div>
+                    </div>
+                {% endfor %} 
+
+                {% for WaterInvesemetSystem in html_WaterInvesemetSystem %}
+                    <div class="Ink-jet-box" type-attr="Water-System">
+                        <div class="jetinkShow_left">
+                            <a href="{{WaterInvesemetSystem.pdf_file.url}}" download><i class="fa-solid fa-file-pdf"></i></a>
+                            <img src="{{WaterInvesemetSystem.image.url}}" alt="{{WaterInvesemetSystem.name}}">
+                            <p>{{WaterInvesemetSystem.type}}</p>
+                        </div>
+                        <div class="jetinkShow_right">
+                            <p class="air-jetink-name">{{WaterInvesemetSystem.name}}</p>
+                            <span class="air-jetink-which-section">{{WaterInvesemetSystem.description}}</span>
+                        </div>
+                    </div>
+                {% endfor %}         
+            </div>
+        </div>
+        
+
+
+    </section>
+
+    <!--##################   W A T E R  T R A T E M E N T  ##################-->
+
+    <!-- ################################################## -->
+
+    <!--##################  I N K  J  E T  ##################-->
+
+    <section class="Ink-jet" id="Ink-jet">
+        <h2 class="Ink-jet-heading">Our <span>Ink-jet</span></h2>
+        <div class="Ink-jet-show-space">
+            <div class="Ink-jet-card-container">
+                
+                <!--#######################-->
+                {% for DODInkJet in html_DODInkJet %}
+                    <div class="Ink-jet-box" type-attr="DODInkJet">
+                        <div class="jetinkShow_left">
+                            <a href="{{DODInkJet.pdf_file.url}}" download><i class="fa-solid fa-file-pdf"></i></a>
+                            <img src="{{DODInkJet.image.url}}" alt="{{DODInkJet.name}}">
+                            <p>{{DODInkJet.type}}</p>
+                        </div>
+                        <div class="jetinkShow_right">
+                            <p class="air-jetink-name">{{DODInkJet.name}}</p>
+                            <span class="air-jetink-which-section">{{DODInkJet.description}}</span>
+                        </div>
+                    </div>
+                {% endfor %}
+                <!--#######################-->
+
+                <!--#######################-->
+                {% for CIJInkJet in html_CIJInkJet %}
+                    <div class="Ink-jet-box" type-attr="CIJInkJet">
+                        <div class="jetinkShow_left">
+                            <a href="{{CIJInkJet.pdf_file.url}}" download><i class="fa-solid fa-file-pdf"></i></a>
+                            <img src="{{CIJInkJet.image.url}}" alt="{{CIJInkJet.name}}">
+                            <p>{{CIJInkJet.type}}</p>
+                        </div>
+                        <div class="jetinkShow_right">
+                            <p class="air-jetink-name">{{CIJInkJet.name}}</p>
+                            <span class="air-jetink-which-section">{{CIJInkJet.description}}</span>
+                        </div>
+                    </div>
+                {% endfor %}
+                <!--#######################-->
+
+                <!--#######################-->
+                {% for TIJInkJet in html_TIJInkJet %}
+                    <div class="Ink-jet-box" type-attr="TIJInkJet">
+                        <div class="jetinkShow_left">
+                            <a href="{{TIJInkJet.pdf_file.url}}" download><i class="fa-solid fa-file-pdf"></i></a>
+                            <img src="{{TIJInkJet.image.url}}" alt="{{TIJInkJet.name}}">
+                            <p>{{TIJInkJet.type}}</p>
+                        </div>
+                        <div class="jetinkShow_right">
+                            <p class="air-jetink-name">{{TIJInkJet.name}}</p>
+                            <span class="air-jetink-which-section">{{TIJInkJet.description}}</span>
+                        </div>
+                    </div>
+                {% endfor %}
+                <!--#######################-->
+
+                <!--#######################-->
+                {% for LaserMarkingInkJet in html_LaserMarkingInkJet %}
+                    <div class="Ink-jet-box" type-attr="LaserMarkingInkJet">
+                        <div class="jetinkShow_left">
+                            <a href="{{LaserMarkingInkJet.pdf_file.url}}" download><i class="fa-solid fa-file-pdf"></i></a>
+                            <img src="{{LaserMarkingInkJet.image.url}}" alt="{{LaserMarkingInkJet.name}}">
+                            <p>{{LaserMarkingInkJet.type}}</p>
+                        </div>
+                        <div class="jetinkShow_right">
+                            <p class="air-jetink-name">{{LaserMarkingInkJet.name}}</p>
+                            <span class="air-jetink-which-section">{{LaserMarkingInkJet.description}}</span>
+                        </div>
+                    </div>
+                {% endfor %}
+                <!--#######################-->
+
+            </div>
+        </div>
+
+    </section>
+    
+    <!--##################  I N K  J  E T   ##################-->
+
+    <!-- ################################################## -->
+
+    <!--##################  S T A N L E S S   S T E E L  ##################-->
+
+    <section class="stanless-steel" id="stanless-steel">
+        <h2 class="stanless-steel-heading">Our <span>stanless-steel</span></h2>
+        <div class="stanless-steel-show-space">
+            <div class="stanless-steel-card-container">
+                
+                {% for SteelStanless in html_SteelStanless %}
+                    <div class="Ink-jet-box" type-attr="SteelStanless">
+                        <div class="jetinkShow_left">
+                            <a href="{{SteelStanless.pdf_file.url}}" download>
+                                <i class="fa-solid fa-file-pdf"></i>
+                            </a>
+                            <img src="{{SteelStanless.image.url}}" alt="{{SteelStanless.name}}">
+                            <p>{{SteelStanless.type}}</p>
+                        </div>
+                        <div class="jetinkShow_right">
+                            <p class="air-jetink-name">{{SteelStanless.name}}</p>
+                            <span class="air-jetink-which-section">{{SteelStanless.description}}</span>
+                        </div>
+                    </div>
+                {% endfor %} 
+            </div>
+
+            </div>
+        </div>
+    </section>
+
+{% endblock content %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- <div class="air-jetinkor-comp-container">
+                <h5>jetinkors</h5>
+                <div class="air-jetinkor-comp-parts">
+                    <div class="air-jetinkor-comp-box">
+                    wwwwwwwww
+                    </div>
+                    <div class="air-jetinkor-comp-box">
+                        wwwwwwwwww
+                    </div>
+                    <div class="air-jetinkor-comp-box">
+                        wwwwwwwwww
+                    </div>
+                    <div class="air-jetinkor-comp-box">
+                        wwwwwwww
+                    </div>
+                </div>
+            </div>
+            <div class="air-jetinkor-eq-container">
+                Equipments
+                <div class="air-jetinkor-eq-box">
+
+                </div>  
+            </div> -->
+
+    <!-- PAGINATION OR LOAD MORE
+        lets say I have 
+        class news(): that defines ( title, description, date, image) fields in django
+
+        that news will go to front end 
+        and will showen at ul and li for each news,,, 
+        how can show news without making my website slow by loading all these news 
+        can I make it lazy loading?
+        or pagination 
+
+        all that I need is ideas for not loading all news at once 
+        suggest for me all of possible solutions
+
+        ChatGPT
+        There are several possible solutions to avoid loading all news at once and improve the performance of your website. 
+        Here are a few ideas:
+
+        Lazy Loading: Implement lazy loading to load news content as the user scrolls down the page. 
+        Initially, load a small number of news items, and as the user reaches the end of the loaded content, 
+        load additional news items dynamically. This approach helps reduce the initial load time and only fetches data when needed.
+
+        Pagination: Divide your news items into pages and display a fixed number of news items per page. 
+        Provide navigation controls such as "Next" and "Previous" to allow users to browse through different pages of news. 
+        This way, you only load and display a limited number of news items at a time.
+
+        Infinite Scroll: Similar to lazy loading, implement infinite scroll to load news items continuously as the user scrolls down the page. 
+        Instead of traditional pagination, the content is dynamically loaded and appended to the existing news list. 
+        This approach provides a seamless browsing experience for users.
+
+        Load More Button: Instead of automatically loading additional news items, 
+        you can implement a "Load More" button that fetches and displays a batch of news items when clicked. 
+        This approach allows users to control when they want to see more news and avoids overwhelming the page with excessive content.
+
+        Caching: Implement caching mechanisms to store and serve previously loaded news content. 
+        By caching the news data, subsequent requests for the same content can be 
+        served faster without hitting the database or performing complex computations.
+
+        Server-Side Filtering: If you have a large number of news items, 
+        consider implementing server-side filtering based on different criteria such as category, date, or popularity. 
+        Allow users to select specific filters to refine the displayed news content, reducing the number of items that need to be loaded.
+
+        Prioritization: Initially load and display the most recent or popular news items, 
+        and load older or less popular news items as the user interacts with the page. 
+        This way, users can quickly see the latest news while older content is loaded gradually in the background.
+
+        You can combine multiple approaches or experiment with different solutions based on the specific requirements of your website 
+        and the preferences of your users.
+
+
+
+
+        //------- Another Responed -------//
+        To implement pagination in Django, you can follow these steps:
+
+        In your view, retrieve the news articles from the database and create a Paginator object, 
+        specifying the number of articles you want to display per page.
+
+        Get the current page number from the request parameters (e.g., URL query parameters or form data).
+
+        Use the Paginator object to retrieve the articles for the current page using the get_page() method.
+
+        Pass the articles for the current page to your template for rendering.
+
+        In your template, display the news articles as <li> elements inside a <ul> container.
+
+            Add navigation links (e.g., previous page, next page) that include the appropriate page numbers in the URLs.
+        By implementing pagination or lazy loading, you can control the amount of news articles loaded at once, 
+        preventing your website from becoming slow due to the heavy initial load.
+    -->
+    

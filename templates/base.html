@@ -1,0 +1,95 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel='stylesheet' href="{% static 'css_src/general_styles/mainStyle.css' %}">
+    <link rel='stylesheet' href="{% static 'css_src/pages/companyPage.css' %}">
+    <link rel='stylesheet' href="{% static 'css_src/general_styles/header.css' %}">
+    <link rel='stylesheet' href="{% static 'css_src/pages/aircompressors.css' %}">
+    <link rel='stylesheet' href="{% static 'css_src/pages/jetink.css' %}">
+    <link rel='stylesheet' href="{% static 'css_src/pages/steelstanless.css' %}">
+    <link rel='stylesheet' href="{% static 'css_src/pages/waterinvestement.css' %}">
+    <link rel='stylesheet' href="{% static 'css_src/pages/homePage.css' %}">
+    
+    <link rel='stylesheet' href="{% static 'css_src/resource_styles/all.min.css' %}">
+    <link rel='stylesheet' href="{% static 'css_src/resource_styles/fontawesome.css' %}">
+
+    <link href="{% static 'https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' %}" rel='stylesheet'>
+
+    <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css'  %}" 
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+    <script src="{% static 'https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js' %}" defer></script>
+    <script src="{% static 'https://unpkg.com/scrollreveal' %}"></script>
+    <script type="text/javascript" src="{% static 'js_src/airCompressors.js' %}" defer></script>
+    <script type="text/javascript" src="{% static 'js_src/companyPage.js' %}" defer></script>
+    <script type="text/javascript" src="{% static 'js_src/homePage.js' %}" defer></script>
+    <script type="text/javascript" src="{% static 'js_src/jetInk.js' %}" defer></script>
+    <script type="text/javascript" src="{% static 'js_src/JQsx.js' %}" defer></script>
+    <script type="text/javascript" src="{% static 'js_src/steelStanless.js' %}" defer></script>
+    <script type="text/javascript" src="{% static 'js_src/waterInvestment.js' %}" defer></script>
+
+
+    <script type="text/javascript" src="{% static 'js_src/boxIcon.js' %}" defer></script>
+    <script type="text/javascript" src="{% static 'js_src/all.min.js' %}" defer></script>
+    
+
+
+{% comment %}   
+    <link rel='stylesheet' href="{% static 'css_src/mainPageStyling.css' %}">
+ {% endcomment %}
+
+
+
+    <title class='title'>Home | Sidal</title>
+</head>
+<body>
+    {% include 'header.html' %}
+    
+    
+    {% block content %} 
+    {% endblock content %}
+    
+    
+    {% include 'footer.html' %}
+
+  <!-- scroll Reval --><!-- Scripts --><!-- Typed Script -->
+
+</body>
+</html>
+
+
+
+
+<!-- >
+  <link rel='stylesheet' href="{% static 'css_src/sty1.css' %}"> 
+
+    <script src="{% static 'https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js' %}"></script>
+    <script src="{% static 'https://unpkg.com/scrollreveal' %}"></script>
+    <script type="text/javascript" src="{% static 'js_src/Script.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js_src/JQsx.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js_src/linkManagment.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js_src/ScrollReveal.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js_src/all.min.js' %}"></script>
+    <script src=" {% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.js' %}" 
+            integrity="sha512-Ktf+fv0N8ON+ALPwyuXP9d8usxLqqPL5Ox9EHlqxehMM+h1wIU/AeVWFJwVGGFMddw/67P+KGFvFDhZofz2YEg==" 
+            crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+
+
+
+
+
+  <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script type="text/javascript" src="jssrc/Script.js"></script>
+  <script type="text/javascript" src="jssrc/JQsx.js"></script>
+  <script type="text/javascript" src="jssrc/linkManagment.js"></script>
+  <script type="text/javascript" src="jssrc/ScrollReveal.js"></script>
+
+  -->

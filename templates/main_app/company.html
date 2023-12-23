@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% comment %} {% load static %} {% endcomment %}
+
+{% block content %}
+
+
+ 
+
+    <h2>
+        COMPANY 
+    </h2>
+    {% for main in SocialMediaLinks %}
+        <h2>
+            company
+        </h2>      
+    {% endfor %}
+{% endblock content %} 
+{% comment %} 
+
+<span><a href="{% url 'company' %}"> company</a></span>
+<span><a href="{% url 'index' %}"> home</a></span> {% endcomment %}

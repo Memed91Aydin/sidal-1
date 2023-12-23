@@ -1,0 +1,478 @@
+{% extends "base.html" %}
+{% load static %}
+<link rel='stylesheet' href="{% static 'css_src/sidstyle1.css' %}">
+{% block content %}
+
+
+<div class="page_Container">
+      
+    <section id="sec_1" class="air_jetinkor" >
+        <div class="Section_Container">
+            <h2 class="titles">Rotary Screw</h2>
+            <div class="AirComp_ShowSpace">
+                <div id="btnbk1" class="btnArrow">
+                    <i class="fa-solid fa-angle-left"></i>
+                </div>
+                <div id="element_container4Rotary" class="element_container">
+                    {% for Rotary in html_RotaryScrewjetinkor %}
+                        <div id="airComp_box4Rotary" class="airComp_box">
+                            <div class="airComp_box_up">
+                                <div class="airComp_box_up_in">
+                                    <a href="{{Rotary.pdf_file.url}}" download><i class="fa-solid fa-file-pdf"></i></a>
+                                    <p>{{Rotary.name}}</p>
+                                    <span>{{Rotary.type}}</p>
+                                </div>   
+                            </div>
+                            <div class="airComp_box_down">
+                                <img src="{{Rotary.image.url}}" alt="{{Rotary.name}}">
+                                <span class="airComp_box_down_span">
+                                    <div class="airComp_box_down_span_h6">
+                                        {{Rotary.description}}
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div id="btnxt1" class="btnArrow">
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ################## HHHHHHHHHHH ||-||-||-||-||-||-||-||-||-|| HHHHHHHHHHH ##################-->
+    <section id="sec_2" class="air_jetinkor" >
+        <div class="Section_Container">
+            <h2 class="titles">Reciprocating</h2>
+            <div class="AirComp_ShowSpace">
+                <div id="btnbk2" class="btnArrow">
+                    <i class="fa-solid fa-angle-left"></i>
+                </div>
+                <div id="element_container4Reciprocating" class="element_container">
+                    {% for Reciprocatingjetinkor in html_Reciprocatingjetinkor %}
+                        <div id="airComp_box4Reciprocating" class="airComp_box">
+                            <div class="airComp_box_up">
+                                <div class="airComp_box_up_in">
+                                    <a href="{{Reciprocatingjetinkor.pdf_file.url}}" download>
+                                        <i class="fa-solid fa-file-pdf"></i>
+                                    </a>
+                                    <p>{{Reciprocatingjetinkor.name}}</p>
+                                    <span>{{Reciprocatingjetinkor.type}}</p>
+                                </div>   
+                            </div>
+                            <div class="airComp_box_down">
+                                <img src="{{Reciprocatingjetinkor.image.url}}" alt="{{Reciprocatingjetinkor.name}}">
+                                <span class="airComp_box_down_span">
+                                    <div class="airComp_box_down_span_h6">
+                                        {{Reciprocatingjetinkor.description}}
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div id="btnxt2" class="btnArrow">
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ################## HHHHHHHHHHH ||-||-||-||-||-||-||-||-||-|| HHHHHHHHHHH ##################-->
+    <section id="sec_3" class="air_jetinkor" >
+        <div class="Section_Container">
+            <h2 class="titles">Scrolljetinkor</h2>
+            <div class="AirComp_ShowSpace">
+                <div id="btnbk3" class="btnArrow">
+                    <i class="fa-solid fa-angle-left"></i>
+                </div>
+                <div id="element_container4Scroll" class="element_container">
+                    {% for Scrolljetinkor in html_Scrolljetinkor %}
+                        <div id="airComp_box4Scroll" class="airComp_box">
+                            <div class="airComp_box_up">
+                                <div class="airComp_box_up_in">
+                                    <a href="{{Scrolljetinkor.pdf_file.url}}" download>
+                                        <i class="fa-solid fa-file-pdf"></i>
+                                    </a>
+                                    <p>{{Scrolljetinkor.name}}</p>
+                                    <span>{{Scrolljetinkor.type}}</p>
+                                </div>   
+                            </div>
+                            <div class="airComp_box_down">
+                                <img src="{{Scrolljetinkor.image.url}}" alt="{{Scrolljetinkor.name}}">
+                                <span class="airComp_box_down_span">
+                                    <div class="airComp_box_down_span_h6">
+                                        {{Scrolljetinkor.description}}
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div id="btnxt3" class="btnArrow">
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ################## HHHHHHHHHHH ||-||-||-||-||-||-||-||-||-|| HHHHHHHHHHH ##################-->
+    <section id="sec_4" class="air_jetinkor" >
+        <div class="Section_Container">
+            <h2 class="titles">Turbo</h2>
+            <div class="AirComp_ShowSpace">
+                <div id="btnbk4" class="btnArrow">
+                    <i class="fa-solid fa-angle-left"></i>
+                </div>
+                <div id="element_container4Turbo" class="element_container">
+                    {% for Turbojetinkor in html_Turbojetinkor %}
+                        <div id="airComp_box4Turbo" class="airComp_box">
+                            <div class="airComp_box_up">
+                                <div class="airComp_box_up_in">
+                                    <a href="{{Turbojetinkor.pdf_file.url}}" download>
+                                        <i class="fa-solid fa-file-pdf"></i>
+                                    </a>
+                                    <p>{{Turbojetinkor.name}}</p>
+                                    <span>{{Turbojetinkor.type}}</p>
+                                </div>   
+                            </div>
+                            <div class="airComp_box_down">
+                                <img src="{{Turbojetinkor.image.url}}" alt="{{Turbojetinkor.name}}">
+                                <span class="airComp_box_down_span">
+                                    <div class="airComp_box_down_span_h6">
+                                        {{Turbojetinkor.description}}
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div id="btnxt4" class="btnArrow">
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ################## HHHHHHHHHHH ||-||-||-||-||-||-||-||-||-|| HHHHHHHHHHH ##################-->
+    <section id="sec_5" class="air_jetinkor" >
+        <div class="Section_Container">
+            <h2 class="titles">Air Dryer Equipements</h2>
+            <div class="AirComp_ShowSpace">
+                <div id="btnbk5" class="btnArrow">
+                    <i class="fa-solid fa-angle-left"></i>
+                </div>
+                <div id="element_container4AirDryer" class="element_container">
+                    {% for AirDryerEquipement in html_AirDryerEquipement %}
+                        <div id="airComp_box4AirDryer" class="airComp_box">
+                            <div class="airComp_box_up">
+                                <div class="airComp_box_up_in">
+                                    <a href="{{AirDryerEquipement.pdf_file.url}}" download>
+                                        <i class="fa-solid fa-file-pdf"></i>
+                                    </a>
+                                    <p>{{AirDryerEquipement.name}}</p>
+                                    <span>{{AirDryerEquipement.type}}</p>
+                                </div>   
+                            </div>
+                            <div class="airComp_box_down">
+                                <img src="{{AirDryerEquipement.image.url}}" alt="{{AirDryerEquipement.name}}">
+                                <span class="airComp_box_down_span">
+                                    <div class="airComp_box_down_span_h6">
+                                        {{AirDryerEquipement.description}}
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div id="btnxt5" class="btnArrow">
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ################## HHHHHHHHHHH ||-||-||-||-||-||-||-||-||-|| HHHHHHHHHHH ##################-->
+    <section id="sec_6" class="air_jetinkor" >
+        <div class="Section_Container">
+            <h2 class="titles">Filter Equipements</h2>
+            <div class="AirComp_ShowSpace">
+                <div id="btnbk6" class="btnArrow">
+                    <i class="fa-solid fa-angle-left"></i>
+                </div>
+                <div id="element_container4Filter" class="element_container">
+                    {% for FilterEquipement in html_FilterEquipement %}
+                        <div id="airComp_box4Filter" class="airComp_box">
+                            <div class="airComp_box_up">
+                                <div class="airComp_box_up_in">
+                                    <a href="{{FilterEquipement.pdf_file.url}}" download>
+                                        <i class="fa-solid fa-file-pdf"></i>
+                                    </a>
+                                    <p>{{FilterEquipement.name}}</p>
+                                    <span>{{FilterEquipement.type}}</p>
+                                </div>   
+                            </div>
+                            <div class="airComp_box_down">
+                                <img src="{{FilterEquipement.image.url}}" alt="{{FilterEquipement.name}}">
+                                <span class="airComp_box_down_span">
+                                    <div class="airComp_box_down_span_h6">
+                                        {{FilterEquipement.description}}
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div id="btnxt6" class="btnArrow">
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ################## HHHHHHHHHHH ||-||-||-||-||-||-||-||-||-|| HHHHHHHHHHH ##################-->
+    <section id="sec_7" class="air_jetinkor" >
+        <div class="Section_Container">
+            <h2 class="titles">Air Receiver Equipements</h2>
+            <div class="AirComp_ShowSpace">
+                <div id="btnbk7" class="btnArrow">
+                    <i class="fa-solid fa-angle-left"></i>
+                </div>
+                <div id="element_container4AirReceiver" class="element_container">
+                    {% for AirReceiverEquipement in html_AirReceiverEquipement %}
+                        <div id="airComp_box4AirReceiver" class="airComp_box">
+                            <div class="airComp_box_up">
+                                <div class="airComp_box_up_in">
+                                    <a href="{{AirReceiverEquipement.pdf_file.url}}" download>
+                                        <i class="fa-solid fa-file-pdf"></i>
+                                    </a>
+                                    <p>{{AirReceiverEquipement.name}}</p>
+                                    <span>{{AirReceiverEquipement.type}}</p>
+                                </div>   
+                            </div>
+                            <div class="airComp_box_down">
+                                <img src="{{AirReceiverEquipement.image.url}}" alt="{{AirReceiverEquipement.name}}">
+                                <span class="airComp_box_down_span">
+                                    <div class="airComp_box_down_span_h6">
+                                        {{AirReceiverEquipement.description}}
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div id="btnxt7" class="btnArrow">
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ################## HHHHHHHHHHH ||-||-||-||-||-||-||-||-||-|| HHHHHHHHHHH ##################-->
+    <section id="sec_8" class="air_jetinkor" >
+        <div class="Section_Container">
+            <h2 class="titles">Nitrogen Generator Equipements</h2>
+            <div class="AirComp_ShowSpace">
+                <div id="btnbk8" class="btnArrow">
+                    <i class="fa-solid fa-angle-left"></i>
+                </div>
+                <div id="element_container4Nitrogen" class="element_container">
+                    {% for NitrogenGeneratorEquipement in html_NitrogenGeneratorEquipement %}
+                        <div id="airComp_box4Nitrogen" class="airComp_box">
+                            <div class="airComp_box_up">
+                                <div class="airComp_box_up_in">
+                                    <a href="{{NitrogenGeneratorEquipement.pdf_file.url}}" download>
+                                        <i class="fa-solid fa-file-pdf"></i>
+                                    </a>
+                                    <p>{{NitrogenGeneratorEquipement.name}}</p>
+                                    <span>{{NitrogenGeneratorEquipement.type}}</p>
+                                </div>   
+                            </div>
+                            <div class="airComp_box_down">
+                                <img src="{{NitrogenGeneratorEquipement.image.url}}" alt="{{NitrogenGeneratorEquipement.name}}">
+                                <span class="airComp_box_down_span">
+                                    <div class="airComp_box_down_span_h6">
+                                        {{NitrogenGeneratorEquipement.description}}
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div id="btnxt8" class="btnArrow">
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ################## HHHHHHHHHHH ||-||-||-||-||-||-||-||-||-|| HHHHHHHHHHH ##################-->
+    <!-- 
+    ICONS ARROW
+    <i class="fa-solid fa-angles-right"></i>
+    <i class="fa-solid fa-angles-up"></i>
+    <i class="fa-solid fa-angles-down"></i>
+    <i class="fa-solid fa-angles-left"></i>
+    
+    
+    <i class="fa-solid fa-angle-left"></i>
+    <i class="fa-solid fa-angle-right"></i>
+    <i class="fa-solid fa-angle-down"></i>
+    <i class="fa-solid fa-angle-up"></i>  
+    -->
+    
+</div>
+
+{% endblock content %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- <div class="air-jetinkor-comp-container">
+                <h5>jetinkors</h5>
+                <div class="air-jetinkor-comp-parts">
+                    <div class="air-jetinkor-comp-box">
+                    wwwwwwwww
+                    </div>
+                    <div class="air-jetinkor-comp-box">
+                        wwwwwwwwww
+                    </div>
+                    <div class="air-jetinkor-comp-box">
+                        wwwwwwwwww
+                    </div>
+                    <div class="air-jetinkor-comp-box">
+                        wwwwwwww
+                    </div>
+                </div>
+            </div>
+            <div class="air-jetinkor-eq-container">
+                Equipments
+                <div class="air-jetinkor-eq-box">
+
+                </div>  
+            </div> -->
+
+    <!-- PAGINATION OR LOAD MORE
+        lets say I have 
+        class news(): that defines ( title, description, date, image) fields in django
+
+        that news will go to front end 
+        and will showen at ul and li for each news,,, 
+        how can show news without making my website slow by loading all these news 
+        can I make it lazy loading?
+        or pagination 
+
+        all that I need is ideas for not loading all news at once 
+        suggest for me all of possible solutions
+
+        ChatGPT
+        There are several possible solutions to avoid loading all news at once and improve the performance of your website. 
+        Here are a few ideas:
+
+        Lazy Loading: Implement lazy loading to load news content as the user scrolls down the page. 
+        Initially, load a small number of news items, and as the user reaches the end of the loaded content, 
+        load additional news items dynamically. This approach helps reduce the initial load time and only fetches data when needed.
+
+        Pagination: Divide your news items into pages and display a fixed number of news items per page. 
+        Provide navigation controls such as "Next" and "Previous" to allow users to browse through different pages of news. 
+        This way, you only load and display a limited number of news items at a time.
+
+        Infinite Scroll: Similar to lazy loading, implement infinite scroll to load news items continuously as the user scrolls down the page. 
+        Instead of traditional pagination, the content is dynamically loaded and appended to the existing news list. 
+        This approach provides a seamless browsing experience for users.
+
+        Load More Button: Instead of automatically loading additional news items, 
+        you can implement a "Load More" button that fetches and displays a batch of news items when clicked. 
+        This approach allows users to control when they want to see more news and avoids overwhelming the page with excessive content.
+
+        Caching: Implement caching mechanisms to store and serve previously loaded news content. 
+        By caching the news data, subsequent requests for the same content can be 
+        served faster without hitting the database or performing complex computations.
+
+        Server-Side Filtering: If you have a large number of news items, 
+        consider implementing server-side filtering based on different criteria such as category, date, or popularity. 
+        Allow users to select specific filters to refine the displayed news content, reducing the number of items that need to be loaded.
+
+        Prioritization: Initially load and display the most recent or popular news items, 
+        and load older or less popular news items as the user interacts with the page. 
+        This way, users can quickly see the latest news while older content is loaded gradually in the background.
+
+        You can combine multiple approaches or experiment with different solutions based on the specific requirements of your website 
+        and the preferences of your users.
+
+
+
+
+        //------- Another Responed -------//
+        To implement pagination in Django, you can follow these steps:
+
+        In your view, retrieve the news articles from the database and create a Paginator object, 
+        specifying the number of articles you want to display per page.
+
+        Get the current page number from the request parameters (e.g., URL query parameters or form data).
+
+        Use the Paginator object to retrieve the articles for the current page using the get_page() method.
+
+        Pass the articles for the current page to your template for rendering.
+
+        In your template, display the news articles as <li> elements inside a <ul> container.
+
+            Add navigation links (e.g., previous page, next page) that include the appropriate page numbers in the URLs.
+        By implementing pagination or lazy loading, you can control the amount of news articles loaded at once, 
+        preventing your website from becoming slow due to the heavy initial load.
+    -->
+    
